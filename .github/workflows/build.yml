@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: ['**']
   workflow_dispatch:
+  
+permissions:
+  contents: write
+  packages: write
 
 env:
   FLUTTER_VERSION: '3.41.9'
@@ -61,6 +65,8 @@ jobs:
           tag_name: "rel"
           files: |
             build/app/outputs/flutter-apk/app-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
 
   # ───────────────────────────────────────────────────────────────────
@@ -114,3 +120,5 @@ jobs:
           tag_name: "rel"
           files: |
             one-cred-windows.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
