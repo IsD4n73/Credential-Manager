@@ -1,0 +1,127 @@
+# ─── OS / editors ──────────────────────────────────────────────
+.DS_Store
+**/.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.history
+.atom/
+.svn/
+.swiftpm/
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code — by default keep launch configs; uncomment to ignore.
+#.vscode/
+
+# Cursor / Claude / other AI assistants
+.claude/
+.cursor/
+
+# ─── Flutter / Dart ────────────────────────────────────────────
+*.class
+*.log
+*.pyc
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+.packages
+/build/
+/coverage/
+**/doc/api/
+migrate_working_dir/
+.fvm/
+.fvmrc
+
+# Symbolication / obfuscation
+app.*.symbols
+app.*.map.json
+
+# ─── Android ───────────────────────────────────────────────────
+**/android/.gradle/
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+/android/app/debug/
+/android/app/profile/
+/android/app/release/
+
+# Signing — NEVER commit keystores or signing config secrets.
+**/android/key.properties
+**/android/app/*.jks
+**/android/app/*.keystore
+*.p12
+*.pem
+
+# ─── iOS / macOS (Xcode) ───────────────────────────────────────
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/ephemeral/
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutter_assets/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/ServiceDefinitions.json
+**/ios/Runner/GeneratedPluginRegistrant.*
+**/Pods/
+**/.symlinks/
+**/Podfile.lock.backup
+*.xcuserstate
+**/xcuserdata/
+**/DerivedData/
+**/macos/Flutter/ephemeral/
+**/macos/Flutter/GeneratedPluginRegistrant.swift
+**/macos/Flutter/Flutter-Generated.xcconfig
+
+# ─── Windows ───────────────────────────────────────────────────
+**/windows/flutter/ephemeral/
+**/windows/flutter/generated_plugin_registrant.*
+**/windows/flutter/generated_plugins.cmake
+*.exp
+*.lib
+*.pdb
+
+# ─── Linux ─────────────────────────────────────────────────────
+**/linux/flutter/ephemeral/
+**/linux/flutter/generated_plugin_registrant.*
+**/linux/flutter/generated_plugins.cmake
+
+# ─── Web ───────────────────────────────────────────────────────
+/web/.dart_tool/
+
+# ─── Local secrets — NEVER commit ──────────────────────────────
+# Copy .env.example to .env and customize. Filled-in .env stays local.
+.env
+.env.local
+.env.*.local
+.env.production
+secrets/
+*.secrets.yaml
+*.secrets.yml
+
+# ─── Local runtime artefacts ───────────────────────────────────
+# Personal vault dumps from import/export. If you actually want a
+# committed sample, drop it under assets/ instead.
+*.vault
+
+# ─── Generated launcher icons ──────────────────────────────────
+# By default the generated launcher icons stay in VCS so cloning
+# produces a ready-to-run repo. Uncomment if you'd rather regenerate
+# them with `dart run flutter_launcher_icons` after each clone.
+#android/app/src/main/res/mipmap-*/
+#macos/Runner/Assets.xcassets/AppIcon.appiconset/
+#windows/runner/resources/app_icon.ico
