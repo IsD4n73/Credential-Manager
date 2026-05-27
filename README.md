@@ -1,6 +1,6 @@
 # One Cred
 
-[![build](https://github.com/<your-org>/one-cred/actions/workflows/build.yml/badge.svg)](https://github.com/<your-org>/one-cred/actions/workflows/build.yml)
+[![build](https://github.com/IsD4n73/Credential-Manager/actions/workflows/build.yml/badge.svg)](https://github.com/IsD4n73/Credential-Manager/actions/workflows/build.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 A local‑first credential manager built for developers. Cross‑platform (Android · macOS · Windows). Open source under MIT.
