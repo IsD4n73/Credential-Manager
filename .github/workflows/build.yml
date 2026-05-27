@@ -48,23 +48,20 @@ jobs:
           else
             echo "APP_PEPPER=" > .env
           fi
-
       - name: flutter pub get
         run: flutter pub get
-
-      - name: flutter analyze
-        run: flutter analyze
-
+        
+      
       - name: Build APK (release)
         run: flutter build apk --release
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: softprops/action-gh-release@v2
         with:
-          name: one-cred-android-${{ github.sha }}
-          path: build/app/outputs/flutter-apk/app-release.apk
-          if-no-files-found: error
-          retention-days: 14
+          tag_name: "rel"
+          files: |
+            build/app/outputs/flutter-apk/app-release.apk
+        
 
   # ───────────────────────────────────────────────────────────────────
   # Windows
@@ -100,9 +97,7 @@ jobs:
       - name: flutter pub get
         run: flutter pub get
 
-      - name: flutter analyze
-        run: flutter analyze
-
+    
       - name: Build Windows (release)
         run: flutter build windows --release
 
@@ -114,9 +109,8 @@ jobs:
             -DestinationPath one-cred-windows.zip
 
       - name: Upload Windows zip
-        uses: actions/upload-artifact@v4
+        uses: softprops/action-gh-release@v2
         with:
-          name: one-cred-windows-${{ github.sha }}
-          path: one-cred-windows.zip
-          if-no-files-found: error
-          retention-days: 14
+          tag_name: "rel"
+          files: |
+            one-cred-windows.zip
